@@ -28,7 +28,7 @@ namespace RedisApp
         {
             services.AddControllers();
 
-            var redis = ConnectionMultiplexer.Connect("172.28.176.1:2279");
+            var redis = ConnectionMultiplexer.Connect("172.28.176.1");
             services.AddScoped(s => redis.GetDatabase());
         }
 
